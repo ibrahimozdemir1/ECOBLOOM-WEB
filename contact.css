@@ -1,0 +1,66 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    background: url('photo/forest.png') no-repeat center center/cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.content {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Back to Home button */
+.btn-back {
+    position: absolute;
+    bottom: 20px;
+    right: 5%;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgba(144, 238, 144, 0.7);
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for all buttons */
+.btn-back:hover,
+.btn:hover {
+    background-color: #fff;
+    /* Beyaz arka plan */
+    color: green;
+    /* Yazý rengi yeþil */
+}

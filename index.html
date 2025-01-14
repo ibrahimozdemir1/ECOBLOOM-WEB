@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Recommendation</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function openProjectIntroduction() {
+            window.location.href = 'introduction.html';
+        }
+    </script>
+    <script>
+        function openProjectDetails() {
+            window.location.href = 'details.html';
+        }
+    </script>
+    <script>
+        function openProjectArchitecture() {
+            window.location.href = 'architecture.html';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="team.html">Team Information</a></li>
+                <li><a href="links.html">All Project Links</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1>Plant Recommendation</h1>
+            <div class="buttons">
+                <button class="btn start" onclick="openProjectIntroduction()">Project Introduction</button>
+                <button class="btn start" onclick="openProjectDetails()">Project Details</button>
+                <button class="btn learn" onclick="openProjectArchitecture()">Project Architecture</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

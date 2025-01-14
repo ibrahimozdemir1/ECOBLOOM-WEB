@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture</title>
+    <link rel="stylesheet" href="architecture.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-container">
+            <p class="image-title">Class Diagram</p>
+            <img src="photo/classdiagramjpg.jpg" alt="Class Diagram" class="image">
+            <div class="text-container">
+                <p class="large-text"><strong>User</strong></p>
+                <p class="middle-text"><strong>Attributes:</strong></p>
+                <p><strong>userID:</strong> Unique identifier for the user.</p>
+                <p><strong>location:</strong> User's location (optional if manual weather input is used).</p>
+                <p><strong>preferences:</strong> Plant preferences (e.g., type, care level).</p>
+                <p class="middle-text"><strong>Methods:</strong></p>
+                <p><strong>inputLocation():</strong> Allows user to input their location.</p>
+                <p><strong>updatePreferences():</strong> Enables modification of user preferences.</p>
+
+                <p class="large-text"><strong>Weather API</strong></p>
+                <p class="middle-text"><strong>Attributes:</strong></p>
+                <p><strong>apiEndpoint:</strong> URL for accessing the weather API.</p>
+                <p><strong>apiKey:</strong> Authentication key for API access.</p>
+                <p class="middle-text"><strong>Methods:</strong></p>
+                <p><strong>fetchWeatherData(location):</strong> Retrieves weather data based on user location.</p>
+
+                <p class="large-text"><strong>Plant Recommendation</strong></p>
+                <p class="middle-text"><strong>Attributes:</strong></p>
+                <p><strong>plantID:</strong> Unique identifier for each plant.</p>
+                <p><strong>plantName:</strong> Name of the plant.</p>
+                <p><strong>growthConditions:</strong> Optimal growth parameters (e.g., temperature, humidity).</p>
+                <p class="middle-text"><strong>Methods:</strong></p>
+                <p><strong>generateRecommendations(weatherData, preferences):</strong> Analyzes data and provides
+                    suitable
+                    plant recommendations.</p>
+
+                <p class="large-text"><strong>Chatbot</strong></p>
+                <p class="middle-text"><strong>Attributes:</strong></p>
+                <p><strong>chatbotID:</strong> Unique identifier for the chatbot instance.</p>
+                <p><strong>conversationHistory:</strong> Log of user interactions.</p>
+                <p class="middle-text"><strong>Methods:</strong></p>
+                <p><strong>provideCareTips(plantID):</strong> Offers care instructions for a specific plant.</p>
+                <p><strong>suggestPurchases(plantID):</strong> Suggests reliable purchasing options for a plant.</p>
+
+                <p class="large-text"><strong>Database</strong></p>
+                <p class="middle-text"><strong>Attributes:</strong></p>
+                <p><strong>dataEntries:</strong> Collection of stored environmental data and plant recommendations.</p>
+                <p><strong>plantLibrary:</strong> Library of plants with their characteristics.</p>
+                <p class="middle-text"><strong>Methods:</strong></p>
+                <p><strong>storeData(data):</strong> Saves weather or user data to the database.</p>
+                <p><strong>retrieveData(criteria):</strong> Retrieves specific information, such as plant
+                    recommendations.
+                </p>
+
+                <p class="large-text"><strong>Machine Learning Model</strong></p>
+                <p class="middle-text"><strong>Attributes:</strong></p>
+                <p><strong>modelID:</strong> Identifier for the trained model.</p>
+                <p><strong>trainingData:</strong> Data used for training the machine learning model.</p>
+                <p class="middle-text"><strong>Methods:</strong></p>
+                <p><strong>predict(weatherData):</strong> Predicts favorable conditions for plant growth.</p>
+
+            </div>
+        </div>
+        <div class="image-container">
+            <p class="image-title">Use Case Diagram</p>
+            <img src="photo/usecase.jpg" alt="Use Case Diagram" class="image">
+            <div class="text-container">
+                <p class="large-text"><strong>Actors</strong></p>
+                <p><strong>User:</strong> Represents home gardeners or farmers who interact with the system to input
+                    data
+                    and receive recommendations.</p>
+                <p><strong>Weather API:</strong> Provides external weather and climate data to the system.</p>
+                <p><strong>Database:</strong> Stores and retrieves information, including weather data, plant
+                    recommendations, and user preferences.</p>
+
+                <p class="large-text"><strong>Use Cases</strong></p>
+                <p><strong>Input Location:</strong> User provides their location to fetch weather data automatically.
+                </p>
+                <p><strong>Input Weather Values:</strong> As an alternative to automatic location input, the user
+                    manually
+                    provides weather data like temperature and humidity.</p>
+                <p><strong>Retrieve Weather Data:</strong> System automatically fetches data from the Weather API based
+                    on
+                    user location.</p>
+                <p><strong>Generate Recommendations:</strong> The system processes the weather data and user preferences
+                    to
+                    suggest suitable plants or crops.</p>
+                <p><strong>Interact with Chatbot:</strong> The user interacts with the chatbot for plant care advice and
+                    purchasing suggestions.</p>
+                <p><strong>Update Preferences:</strong> The user customizes system behaviour by specifying preferences,
+                    such
+                    as plant type or care requirements.</p>
+                <p><strong>Display Recommendations:</strong> The system shows a tailored list of plants or crops to the
+                    user.</p>
+
+                <p class="large-text"><strong>Additional Notes</strong></p>
+                <p><strong>System Boundary:</strong></p>
+                <p>Label the system boundary as ECOBLOOM System, encapsulating all the use cases.</p>
+
+                <p><strong>Associations:</strong></p>
+                <p>Draw lines between User and the relevant use cases:</p>
+                <p>- Input Location</p>
+                <p>- Input Weather Values</p>
+                <p>- Interact with Chatbot</p>
+                <p>- Update Preferences</p>
+                <p>- Display Recommendations</p>
+                <p>Connect Weather API to Retrieve Weather Data.</p>
+                <p>Connect Database to Generate Recommendations and Interact with Chatbot.</p>
+
+                <p class="large-text"><strong>Decision Point</strong></p>
+                <p>Add a note or visual fork showing that the User can choose between Input Location and Input Weather
+                    Values.</p>
+
+
+            </div>
+        </div>
+        <div class="image-container">
+            <p class="image-title">Activity Diagram</p>
+            <img src="photo/activitydiagram.jpg" alt="Activity Diagram" class="image">
+            <div class="text-container">
+                <p class="large-text"><strong>Workflow Explanation</strong></p>
+                <p class="middle-text"><strong>User Interaction:</strong></p>
+                <p>The user begins the process by either updating preferences or interacting with the chatbot.</p>
+                <p>If updating preferences, these preferences are saved in the Database under "User Preference."</p>
+
+                <p class="middle-text"><strong>Input Methods:</strong></p>
+                <p>The user can choose between two input methods: Input Weather Data or Location (directly input weather
+                    details or provide a location for fetching weather data).</p>
+                <p>Based on the input, the process diverges:</p>
+                <p>Input Location: The location is passed to the Weather API.</p>
+                <p>Input Weather Values: These values bypass the Weather API and are used directly.</p>
+
+                <p class="middle-text"><strong>Weather API Interaction:</strong></p>
+                <p>If the location is provided, the system fetches weather data from the Weather API and sends it back
+                    to
+                    the workflow.</p>
+
+                <p class="middle-text"><strong>Data Analysis and Plant Recommendation:</strong></p>
+                <p>The Machine Learning Model analyzes the weather data (either fetched from the API or user-provided).
+                </p>
+                <p>Based on the analysis, the model predicts suitable plant recommendations.</p>
+
+                <p class="middle-text"><strong>Database Storage:</strong></p>
+                <p>Weather results are stored in the database under "Stored Weather Result."</p>
+                <p>Plant recommendation data is also stored.</p>
+
+                <p class="middle-text"><strong>Display Recommendations:</strong></p>
+                <p>The Plant Recommendation system generates the final plant recommendations based on weather analysis.
+                </p>
+                <p>The recommendations are displayed to the user.</p>
+
+                <p class="middle-text"><strong>Chatbot Support:</strong></p>
+                <p>The Chatbot facilitates user interaction by querying the database and responding to user requests.
+                </p>
+
+                <p class="large-text"><strong>Key Components</strong></p>
+                <p class="middle-text"><strong>User Preferences:</strong> Personalization of recommendations by saving
+                    user-specific
+                    settings in the database.</p>
+                <p class="middle-text"><strong>Weather Input:</strong> Flexibility to input either raw weather data or a
+                    location for
+                    automated fetching.</p>
+                <p class="middle-text"><strong>Machine Learning Model:</strong> Performs analysis and prediction for
+                    generating plant recommendations.</p>
+                <p class="middle-text"><strong>Recommendations Display:</strong> Results are presented to the user in a
+                    user-friendly format.</p>
+            </div>
+        </div>
+        <a href="index.html"><button class="btn-back">Back to Home</button></a>
+    </div>
+</body>
+
+</html>

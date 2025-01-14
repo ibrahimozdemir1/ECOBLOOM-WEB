@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="details.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Project Details</h1>
+        <div class="content">
+            <p class="large-text"><strong>1. System Overview</strong></p>
+            <p>ECOBLOOM is a web-based application developed to assist users in selecting and caring for plants that are
+                suited to their specific environments, as well as support farmers in choosing appropriate crops for
+                their fields. The system integrates several key components to achieve its functionality, including data
+                collection via API, data analysis through machine learning, a recommendation engine, and an interactive
+                chatbot. The main components of the system are as follows:</p>
+
+            <p class="middle-text"><strong>1.1. Data Collection and Integration</strong></p>
+            <p> ECOBLOOM collects real-time weather and climate data through an API based on users' geographic
+                locations. This information includes variables such as temperature, humidity, precipitation, and
+                seasonal patterns.</p>
+            <p> These data points are crucial for predicting favourable environmental conditions for different plant
+                species and serve as the foundation for the recommendation engine.</p>
+
+            <p class="middle-text"><strong>1.2. Machine Learning Prediction System</strong></p>
+            <p> ECOBLOOM employs machine learning algorithms to analyse collected climate data and forecast future
+                environmental conditions. By identifying patterns and trends in weather and climate, the system creates
+                a database of environmental factors that influence the growth of various plant species.</p>
+            <p> This predictive capability enables the application to recommend plant species that are most likely to
+                thrive in specific environmental conditions.</p>
+
+            <p class="middle-text"><strong>1.3. Plant Recommendation Engine</strong></p>
+            <p> Based on the predictive insights obtained from the machine learning model, the ECOBLOOM recommendation
+                engine suggests the most suitable plant species for users' locations from a pre-prepared plant database.
+            </p>
+            <p> The engine considers factors such as temperature, rainfall, humidity, and seasonal changes to make
+                tailored suggestions for home gardeners, plant enthusiasts, and farmers.</p>
+
+            <p class="middle-text"><strong>1.4. Interactive Chatbot</strong></p>
+            <p> To provide a more engaging user experience, ECOBLOOM includes a chatbot that interacts with users by
+                answering questions about plant care and offering step-by-step guidance on nurturing their chosen
+                plants.</p>
+            <p> Additionally, the chatbot can simulate purchasing options, guiding users to reliable sources for
+                acquiring plants and materials necessary for their growth.</p>
+
+            <p class="middle-text"><strong>1.5. User Interface and Web-Based Access</strong></p>
+            <p> The application will be accessible through a user-friendly web interface. The interface allows users to
+                input their location and preferences, receive plant recommendations, and interact with the chatbot for
+                continuous support.</p>
+            <p> Accessibility and ease of use are central to the design, ensuring that both novice and experienced
+                users can seamlessly access ECOBLOOM?s features and guidance.</p>
+
+            <p class="large-text"><strong>2. Functional requirements</strong></p>
+
+            <p class="middle-text"><strong>2.1. Data Collection Requirements</strong></p>
+            <p> Location-based Data Retrieval: The system will collect weather and climate data specific to each user's
+                location by integrating with a third-party API.</p>
+            <p> Environmental Data Parameters: The system will collect key environmental parameters, including
+                temperature, humidity, rainfall, sunlight, and seasonal patterns relevant to plant growth.</p>
+            <p> Data Update Frequency: The system will periodically update environmental data to ensure that
+                recommendations remain current and accurate.</p>
+
+            <p class="middle-text"><strong>2.2. Data Analysis and Prediction Requirements</strong></p>
+            <p> Machine Learning Predictions: The system will use machine learning algorithms to analyse collected
+                environmental data and predict future conditions affecting plant growth.</p>
+            <p> Environmental Impact Analysis: The system will analyse how environmental factors, such as temperature
+                and humidity, impact the growth of various plant species to support plant selection recommendations.</p>
+            <p> Data Storage: The system will store collected and processed data in a structured database to support
+                future analysis and continuous improvement of the recommendation model.</p>
+
+            <p class="middle-text"><strong>2.3. Plant Recommendation Requirements</strong></p>
+            <p> Plant and Crop Selection: The system will recommend suitable plant species or crop types based on
+                users specific environmental conditions and preferences.</p>
+            <p> Seasonal Suitability: The system will consider seasonal variations and recommend plants that thrive in
+                the user's current or anticipated climate.</p>
+            <p> User Customization: The system will allow users to customize the recommendation results by selecting
+                maintenance cost preferences and manually specifying extreme environmental conditions (sunlight,
+                temperature, humidity) specific to their location.</p>
+
+            <p class="middle-text"><strong>2.4. Chatbot Requirements</strong></p>
+            <p> Plant Care Guidance: The chatbot will provide users with detailed care instructions, including watering
+                frequency, sunlight needs, and pruning advice based on the selected plant species.</p>
+            <p> Simulated Purchasing Guidance: The chatbot will guide users on potential purchasing options, suggesting
+                reliable sources for acquiring plants and necessary materials for their care.</p>
+            <p> Interactive Support: The chatbot will support user inquiries and allow users to ask specific questions
+                about plant care and sourcing.</p>
+
+            <p class="middle-text"><strong>2.5. User Interface Requirements</strong></p>
+            <p> Web Application Access: The system will be accessible via a web-based interface compatible with major
+                browsers.</p>
+            <p> Location Input: The system will allow users to input or verify their location to ensure that
+                recommendations are tailored to their specific environmental context.</p>
+            <p> Personalization Options: The system will enable users to customize their experience by selecting
+                preferences (e.g., indoor vs. outdoor plants, low-maintenance options).</p>
+
+            <p class="middle-text"><strong>2.6. External Interface Requirements</strong></p>
+            <p> Weather API Integration: The system will integrate with a reliable weather API to retrieve
+                location-specific climate data.</p>
+            <p> Database Management: The system will interface with a secure database to store, update, and retrieve
+                information on environmental factors, plant species, and user interaction history.</p>
+            <p> Machine Learning Model Deployment: The system will interface with a deployed machine learning model to
+                process and predict environmental.</p>
+
+            <p class="large-text"><strong>3. Non-functional requirements</strong></p>
+
+            <p class="middle-text"></p><strong>3.1. Performance Requirements</strong></p>
+            <p> Response Time: The system will provide recommendations and chatbot responses within 5 seconds of user
+                input under normal operating conditions.</p>
+            <p> Data Processing Speed: The system will process environmental data and generate recommendations within a
+                maximum of 10 seconds, even during peak usage.</p>
+            <p> Scalability: The system shall be designed to handle up to 3000 simultaneous users without significant
+                degradation in performance.</p>
+
+            <p class="middle-text"><strong>3.2. Reliability and Availability</strong></p>
+            <p> Uptime: The system will be designed to ensure minimal downtime for users.</p>
+            <p> Error Handling: The system will handle errors gracefully, with clear notifications to the user and the
+                ability to retry data retrieval or processes when failures occur.</p>
+
+            <p class="middle-text"><strong>3.3. Usability Requirements</strong></p>
+            <p> User Interface Design: The systems web interface will be easy to navigate, enabling users of all
+                experience levels to interact with ECOBLOOMs features effectively.</p>
+            <p> Tutorial and Help Section: The system will include a help section and an introductory tutorial to
+                assist users in understanding the platforms functionalities, including how to interact with the
+                chatbot.</p>
+
+            <p class="middle-text"><strong>3.4. Security Requirements</strong></p>
+            <p> Data Protection: The system will encrypt all user data, both in transit and at rest, to safeguard
+                against unauthorized access.</p>
+
+            <p class="middle-text"><strong>3.5. Maintainability Requirements</strong></p>
+            <p> Modular Design: The system will be designed with modular components to facilitate updates, allowing
+                developers to modify individual modules without affecting the entire application.</p>
+            <p> Documentation: The systems codebase will be documented thoroughly to support future development,
+                maintenance, and troubleshooting efforts.</p>
+
+            <p class="middle-text"><strong>3.6. Portability Requirements</strong></p>
+            <p> Cross-Browser Compatibility: The system will be compatible with major web browsers, including Chrome,
+                Safari, and Edge.</p>
+
+        </div>
+        <a href="index.html" class="btn-back">Back to Home</a>
+    </div>
+</body>
+
+</html>
